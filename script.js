@@ -98,7 +98,7 @@ function displayResults(age, height, weightBaseline, timeline, gender, resultPar
     yNew = yNew.toFixed(2);
 
     // Affichage des résultats
-    resultParagraph.innerHTML = `Your basal metabolism :${mbCaloriesConverted.toFixed(2)} Kcal.<br>Your Weight Loss : ${yNew} kg.`;
+    resultParagraph.innerHTML = `Your basal metabolism : ${mbCaloriesConverted.toFixed(2)} Kcal.<br>Your Weight Loss : ${yNew} kg.`;
 
 }
 let chart;
