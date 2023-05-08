@@ -92,7 +92,7 @@ function displayResults(age, height, weightBaseline, timeline, gender, resultPar
 
     // Calcul de la perte de poids estimée
     const timelineTrans = (timeline + 1) ** 0.5; // Conversion des jours en mois
-    let yNew = 0.3324 * mb + (0.6037 - (0.4320 * mb)) * Timeline_trans;
+    let yNew = 0.3324 * mb + (0.6037 - (0.4320 * mb)) * timelineTrans;
     // Arrondir à 2 décimales
     yNew = yNew.toFixed(2);
 
