@@ -114,8 +114,8 @@ function plotCurve(age, height, weight_baseline, timeline) {
     for (var i = 0; i <= timeline; i++) {
         Timeline.push(i);
         Timeline_trans.push(Math.sqrt(i + 1));
-        y_new_m.push(i === 0 ? 0 : ( 0.3324 * MB_men + (0.6037 -0.4320 * MB_men) * Timeline_trans[i] );
-        y_new_f.push(i === 0 ? 0 : ( 0.3324 * MB_women + (0.6037 -0.4320 * MB_women) * Timeline_trans[i] );
+        y_new_m.push(i === 0 ? 0 : ( 0.3324 * MB_men + (0.6037 -0.4320 * MB_men) * Timeline_trans[i] ));
+        y_new_f.push(i === 0 ? 0 : ( 0.3324 * MB_women + (0.6037 -0.4320 * MB_women) * Timeline_trans[i] ));
     }
 
     // Création du graphique avec Chart.js
