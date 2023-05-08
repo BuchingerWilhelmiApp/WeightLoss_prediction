@@ -92,7 +92,7 @@ function displayResults(age, height, weightBaseline, timeline, gender, resultPar
 
     // Calcul de la perte de poids estimée
     const timelineTrans = (timeline + 1) ** 0.5; // Conversion des jours en mois
-    let yNew = 0.3324 * mb + (0.6037 - (0.4320 * mb)) * timelineTrans;
+    let yNew =  0.3324 * mb + 0.6037 * timelineTrans - 0.4320 * mb * timelineTrans ;
     // Arrondir à 2 décimales
     yNew = yNew.toFixed(2);
 
@@ -113,8 +113,8 @@ function plotCurve(age, height, weight_baseline, timeline) {
     for (var i = 0; i <= timeline; i++) {
         Timeline.push(i);
         Timeline_trans.push(Math.sqrt(i + 1));
-        y_new_m.push(i === 0 ? 0 : ( 0.3324 * MB_men + (0.6037 - (0.4320 * MB_men)) * Timeline_trans[i] ));
-        y_new_f.push(i === 0 ? 0 : ( 0.3324 * MB_women + (0.6037 - (0.4320 * MB_women)) * Timeline_trans[i] ));
+        y_new_m.push(i === 0 ? 0 : ( 0.3324 * MB_men + 0.6037 * Timeline_trans[i] - 0.4320 * MB_men * Timeline_trans[i] ));
+        y_new_f.push(i === 0 ? 0 : ( 0.3324 * MB_men + 0.6037 * Timeline_trans[i] - 0.4320 * MB_men * Timeline_trans[i] ));
     }
 
     // Création du graphique avec Chart.js
