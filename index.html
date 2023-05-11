@@ -18,22 +18,32 @@
     <header>
         <h1>BW Science</h1>
         <center> <h2> Weight loss estimator</h2></center>
+
+        <div class="text-content">
+            <p>The weight loss during fasting depends on individual factors that could not be taken into account in this model,
+                such as family history and physical activity. The estimated weight loss is accurate to an average of 85 % and was established using data from more than 1500 patients. 
+                The weight loss is more pronounced during the first days due to changes in the levels of hydration. It then then stabilise after the fasting metabolism is well established, with fat becoming the main fuel for our cells.
+            </p>
+            <p>This estimation is for indicative purposes, to provide a better understanding of the way body weight changes for an average patient of a given body weight, age and gender, during a long-term fast at the Buchinger Wilhelmi Clinic.
+            </p>
+        </div>
+
     </header>
 </div>
     <div class="main-content">
 
         <form id="mb-form">
             <label for="weight_baseline">Weight (kg):<span id="weight_output"></span></label>
-            <input type="range" id="weight_baseline" name="weight_baseline" min="30" max="200" step="1" value = "90" required>
+            <input type="range" id="weight_baseline" name="weight_baseline" min="40" max="200" step="1" value = "90" required>
 
             <label for="height">Height (cm) : <span id="height_output"></span></label></label>
-            <input type="range" id="height" name="height" min="100" max="220"  step="1" value = "170" required>
+            <input type="range" id="height" name="height" min="110" max="220"  step="1" value = "170" required>
             
             <label for="age">Age : <span id="age_output"></span></label></label>
-            <input type="range" id="age" name="age" min="10" max="100" step="1" value = "35" required>
+            <input type="range" id="age" name="age" min="18" max="100" step="1" value = "35" required>
             <span id="age_output"></span>
             
-            <label for="gender">Sexe : </label>
+            <label for="gender">Gender : </label>
             <select id="gender" name="gender" value = "men" required>
                 <option value="Men">Men</option>
                 <option value="Women">Women</option>
@@ -56,14 +66,6 @@
         </div>
 
 
-        <div class="text-content">
-            <p>The weight loss during fasting depends on individual factors that could not be taken into account in this model,
-                such as family history and physical activity. The estimated weight loss is accurate to an average of 85% and was established using data from more than 1500 patients. 
-                The weight loss is more pronounced during the first days due to changes in the levels of hydration.
-                The weight loss then stabilise after the fasting metabolism is well established, with fat becoming the main fuel for our cells.
-                This estimation is for indicative purposes, to provide a better understanding of the way body weight changes for an average patient of a given body weight, age and gender, during a long-term fast at the Buchinger Wilhelmi Clinic.
-            </p>
-        </div>
     </div>
 
 
