@@ -81,19 +81,22 @@ function displayResults(age, height, weightBaseline, timeline, gender, resultPar
     // Calcul du métabolisme de base (MB)
     let mb = 0;
     let mbCalories = 0;
+    let coef_men = 1.083;
+    let coef_women = 0.963;
+    
     if (gender === "Men") {
-        mb = 1.083 * weightBaseline ** 0.48 * (height / 100) ** 0.50 * age ** (-0.13);
+        mb = coef_men * weightBaseline ** 0.48 * (height / 100) ** 0.50 * age ** (-0.13);
         mbCalories = 259; // Coefficient pour les hommes
     } else if (gender === "Women") {
-        mb = 0.963 * weightBaseline ** 0.48 * (height / 100) ** 0.50 * age ** (-0.13);
+        mb = coef_women * weightBaseline ** 0.48 * (height / 100) ** 0.50 * age ** (-0.13);
         mbCalories = 230; // Coefficient pour les femmes
     }
 
     // Conversion du métabolisme de base en calories
-    const mbCaloriesConverted = mb * mbCalories;
+    const mbCaloriesConverted = (weightBaseline ** 0.48 * (height / 100) ** 0.50 * age ** (-0.13)) * mbCalories;
 
     // Calcul de la perte de poids estimée
-    const timelineTrans = (timeline + 1) ** 0.5; // Conversion des jours en mois
+    const timelineTrans = (timeline + 1) ** 0.5; // apply log transformation 
     let yNew =  0.3324 * mb + 0.6037 * timelineTrans - 0.4320 * mb * timelineTrans ;
     // Arrondir à 2 décimales
     yNew = yNew.toFixed(2);
